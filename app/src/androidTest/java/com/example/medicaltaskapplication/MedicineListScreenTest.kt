@@ -36,39 +36,39 @@ class MedicineListScreenTest {
 
     @Test
     fun stateWithHighSchools_isRendered() {
-        val medicineList = DummyContent.medicine.first().problems
+        val problemList = DummyContent.problems
         testRule.setContent {
             MedicalAppTheme {
                 MedicineDetailsScreen(
                     uiState = MedicineDetailsUiState.Success(
-                        medicineList.first()
+                        problemList.first()
                     )
                 )
             }
         }
 
         testRule.onNodeWithText(
-            medicineList[0].id
+            problemList[0].id
         ).assertIsDisplayed()
 
         testRule.onNodeWithText(
-            medicineList[0].name
+            problemList[0].name
         ).assertIsDisplayed()
 
         testRule.onNodeWithText(
-            medicineList[0].medications.first().name
+            problemList[0].medications.first().name
         ).assertIsDisplayed()
 
         testRule.onNodeWithText(
-            medicineList[0].medications.first().dose
+            problemList[0].medications.first().dose
         ).assertIsDisplayed()
 
         testRule.onNodeWithText(
-            medicineList[0].medications.first().strength
+            problemList[0].medications.first().strength
         ).assertIsDisplayed()
 
         testRule.onNodeWithText(
-            medicineList[0].medications.first().sideEffects.first()
+            problemList[0].medications.first().sideEffects.first()
         ).assertIsDisplayed()
 
         testRule.onNodeWithContentDescription(
@@ -101,18 +101,17 @@ class MedicineListScreenTest {
 
     @Test
     fun stateWithHighSchools_ClickOnItem_isRegistered() {
-        val problem = DummyContent.medicine.first().problems
-        val targetProblem = problem.first()
+        val problem = DummyContent.problems.first()
 
         testRule.setContent {
             MedicalAppTheme {
                 MedicineDetailsScreen(
-                    uiState = MedicineDetailsUiState.Success(targetProblem),
+                    uiState = MedicineDetailsUiState.Success(problem),
                 )
             }
         }
 
-        testRule.onNodeWithText(targetProblem.id)
+        testRule.onNodeWithText(problem.id)
             .performClick()
     }
 

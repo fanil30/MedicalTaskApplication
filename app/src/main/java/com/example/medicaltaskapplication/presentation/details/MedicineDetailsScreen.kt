@@ -126,7 +126,7 @@ internal fun MedicineDetailsScreen(
 fun MedicineDetailsScreenPreview() {
     MedicineDetailsScreen(
         uiState = MedicineDetailsUiState.Success(
-            problem = DummyContent.medicine.first()
+            problem = DummyContent.problems.first()
         )
     )
 }

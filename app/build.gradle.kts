@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.medicaltaskapplication"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -60,6 +60,9 @@ dependencies {
 
     // Hilt Dependency Injection
     implementation(libs.hilt.android)
+    implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.room.common)
+    implementation(libs.room.ktx)
     kapt(libs.hilt.compiler)
 
     // Arch Components

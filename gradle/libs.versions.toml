@@ -29,6 +29,10 @@ mockitoVersion = "5.10.0"
 archCoreTesting = "2.2.0"
 mockkVersion = "1.13.4"
 kotestVersion = "5.8.0"
+material3Android = "1.2.0"
+roomCommon = "2.6.1"
+roomCompiler = "2.6.1"
+roomKtx = "2.6.1"
 
 [libraries]
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
@@ -76,6 +80,10 @@ splash-screen = { group = "androidx.core", name = "core-splashscreen", version.r
 paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "paging_version" }
 logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "logging-interceptor" }
 maps-compose = { group = "com.google.maps.android", name = "maps-compose", version.ref = "google-map" }
+androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
+androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCompiler" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
 
 
 [plugins]

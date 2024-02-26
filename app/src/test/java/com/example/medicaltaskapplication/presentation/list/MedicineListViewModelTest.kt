@@ -37,7 +37,7 @@ class MedicineListViewModelTest {
 
         val successItem = viewModel.uiState.value
         successItem.shouldBeTypeOf<MedicineListUiState.Success>()
-        successItem.medicine.shouldBe(fakeMedicine)
+        successItem.problem.shouldBe(fakeMedicine)
     }
 
     @Test

@@ -35,7 +35,7 @@ class MedicineDetailsScreenTest {
 
     @Test
     fun stateWithHighSchoolDetails_isRendered() {
-        val problem = DummyContent.medicine.first().problems.first()
+        val problem = DummyContent.problems.first()
         testRule.setContent {
             MedicalAppTheme {
                 MedicineDetailsScreen(

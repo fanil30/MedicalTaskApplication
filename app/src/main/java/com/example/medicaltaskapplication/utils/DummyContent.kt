@@ -6,7 +6,7 @@ import com.example.medicaltaskapplication.data.model.Problem
 
 object DummyContent {
 
-    val medicine = listOf(
+    val problems = listOf(
         Problem(
             "0", "Diabetes", listOf(
                 Medication(
